@@ -20,7 +20,7 @@ public class Ejercicio_pole {
 				 
 				 System.out.println(splited[1]);
 				 
-				 
+				 //just a test
 				 
 				 linea=br.readLine();
 			 }
