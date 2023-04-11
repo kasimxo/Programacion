@@ -11,8 +11,10 @@ public class Ejercicio_tarifas {
 		FileWriter output;
 		
 		try {
-			data = new FileReader("C:\\Users\\34644\\eclipse-workspace\\Programacion\\data\\Times.txt");
-			output = new FileWriter("C:\\Users\\34644\\eclipse-workspace\\Programacion\\data\\Tarifas.txt");
+			
+			String filePath = new File("").getAbsolutePath();
+			data = new FileReader(filePath+"\\data\\Times.txt");
+			output = new FileWriter(filePath+"\\data\\Tarifas.txt");
 			
 			BufferedReader br = new BufferedReader(data);
 			BufferedWriter bw = new BufferedWriter(output);
@@ -34,7 +36,7 @@ public class Ejercicio_tarifas {
 				
 				String tarifaCalculada = "" + costeEnEuros;
 				
-				bw.append(tarifaCalculada + " â‚¬\n");
+				bw.append(tarifaCalculada + " €\n");
 				bw.flush();
 			}
 			

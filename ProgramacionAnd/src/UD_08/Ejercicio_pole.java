@@ -20,7 +20,8 @@ public class Ejercicio_pole {
 		
 		try {
 			
-			 fr = new FileReader("C:\\Users\\Alumno\\git\\ProgramacionAnd\\ProgramacionAnd\\data\\Pole.txt");
+			 String filePath = new File("").getAbsolutePath();
+			 fr = new FileReader(filePath+"\\data\\Pole.txt");
 			 
 			 DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			 DocumentBuilder db = dbf.newDocumentBuilder();
@@ -36,8 +37,6 @@ public class Ejercicio_pole {
 			 
 			 while(linea!=null) {
 				 String[] splited = linea.split("::");
-				 
-				 System.out.println(splited[1]);
 				 
 				 Element pilot = doc.createElement("piloto");
 				 raiz.appendChild(pilot);
