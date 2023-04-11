@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pilotos>
+    <piloto posicion="1">
+        <nombre>Lewis Hamilton</nombre>
+        <escuderia>Mercedes F1</escuderia>
+        <coche>W11</coche>
+        <circuito>Monza</circuito>
+        <anyo>2020</anyo>
+    </piloto>
+    <piloto posicion="2">
+        <nombre>Kimi Raikkonen</nombre>
+        <escuderia>Ferrari</escuderia>
+        <coche>SF71H</coche>
+        <circuito>Monza</circuito>
+        <anyo>2018</anyo>
+    </piloto>
+    <piloto posicion="3">
+        <nombre>Charles Leclerc</nombre>
+        <escuderia>Ferrari</escuderia>
+        <coche>SF90</coche>
+        <circuito>Monza</circuito>
+        <anyo>2019</anyo>
+    </piloto>
+    <piloto posicion="4">
+        <nombre>Rubens Barrichello</nombre>
+        <escuderia>Ferrari</escuderia>
+        <coche>F2004</coche>
+        <circuito>Monza</circuito>
+        <anyo>2004</anyo>
+    </piloto>
+    <piloto posicion="5">
+        <nombre>Juan Pablo Montoya</nombre>
+        <escuderia>Williams-BMW</escuderia>
+        <coche>FW24</coche>
+        <circuito>Monza</circuito>
+        <anyo>2002</anyo>
+    </piloto>
+    <piloto posicion="6">
+        <nombre>Keke Rosberg</nombre>
+        <escuderia>Williams</escuderia>
+        <coche>FW10 Honda</coche>
+        <circuito>Gran BretaÃ±a</circuito>
+        <anyo>1985</anyo>
+    </piloto>
+    <piloto posicion="7">
+        <nombre>Michael Schumacher</nombre>
+        <escuderia>Ferrari</escuderia>
+        <coche>F2003-GA</coche>
+        <circuito>Monza</circuito>
+        <anyo>2003</anyo>
+    </piloto>
+    <piloto posicion="8">
+        <nombre>Ayrton Senna</nombre>
+        <escuderia>McLaren</escuderia>
+        <coche>MP4/6</coche>
+        <circuito>Monza</circuito>
+        <anyo>1991</anyo>
+    </piloto>
+    <piloto posicion="9">
+        <nombre>Juan Pablo Montoya</nombre>
+        <escuderia>McLaren Mercedes</escuderia>
+        <coche>MP4/20</coche>
+        <circuito>Monza</circuito>
+        <anyo>2005</anyo>
+    </piloto>
+    <piloto posicion="10">
+        <nombre>Alain Prost</nombre>
+        <escuderia>Williams</escuderia>
+        <coche>FW15C</coche>
+        <circuito>Monza</circuito>
+        <anyo>1993</anyo>
+    </piloto>
+    <piloto posicion="11">
+        <nombre>Lewis Hamilton</nombre>
+        <escuderia>Mercedes AMG F1</escuderia>
+        <coche>W07</coche>
+        <circuito>Monza</circuito>
+        <anyo>2016</anyo>
+    </piloto>
+    <piloto posicion="12">
+        <nombre>Nelson Piquet</nombre>
+        <escuderia>Williams-Honda</escuderia>
+        <coche>FW11B</coche>
+        <circuito>Austria</circuito>
+        <anyo>1987</anyo>
+    </piloto>
+</pilotos>
