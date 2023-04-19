@@ -25,19 +25,25 @@ public class BaseDeDatos {
 	public void mostrarTabla() {
 		System.out.println("¿Qué tabla quieres ver? \n1 - Empleados\n2 - Provincias\n3 - Localidades");
 		int sel = Leer.leerInt();
+		String s = "";
 		switch(sel) {
 		case 0:
 			return;
 		case 1:
-			mostrarEmpleados();
+			//mostrarEmpleados();
+			s = "Empleados";
 			break;
 		case 2:
-			mostrarProvincias();
+			//mostrarProvincias();
+			s = "Provincias";
 			break;
 		case 3:
-			mostrarLocalidades();
+			//mostrarLocalidades();
+			s = "Localidades";
 			break;
 		}
+		
+		Utilidades.mostrarTabla(sent, s);
 	}
 	
 	private void mostrarLocalidades() {
