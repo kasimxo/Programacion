@@ -1,0 +1,4 @@
+This package contains imges for easier windowBuilder design process
+Every image inside this package is CC friendly.
+
+That being said, please use your own images in your projects, even if you are just learning/testing
