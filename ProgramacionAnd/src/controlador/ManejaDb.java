@@ -25,10 +25,9 @@ public class ManejaDb {
 	}
 	
 	public void changeDataBase(String newDataBaseName) throws SQLException {
-		//c.close();
 		this.dataBaseName = newDataBaseName;
 		this.c = DriverManager.getConnection("jdbc:sqlite:D:\\sqlite\\" + newDataBaseName);
-		
+		Main.vp.setTitle("Conectado a: " + newDataBaseName.substring(0, newDataBaseName.length()-3));
 	}
 	
 	
@@ -42,6 +41,7 @@ public class ManejaDb {
 			ResultSet result = sentencia.executeQuery(sql);
 			ResultSetMetaData rsmd = result.getMetaData();
 			int columnsNumber = rsmd.getColumnCount();
+			tablas.add(result.getString(2));
 			while (result.next()) {
 				tablas.add(result.getString(2));
 				System.out.println(result.getString(2));

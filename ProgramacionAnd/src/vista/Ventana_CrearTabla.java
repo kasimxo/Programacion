@@ -59,9 +59,11 @@ public class Ventana_CrearTabla extends JFrame {
 		JButton btn_Accept = new JButton("Crear");
 		btn_Accept.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println(Main.mDB.createDB(textField.getText()));
+				String s = Main.mDB.createDB(textField.getText());
+				System.out.println(s);
 				textField.setText("");
 				Main.vct.setVisible(false);
+				Main.vp.printText(s);
 			}
 		});
 		btn_Accept.setBounds(10, 127, 89, 23);

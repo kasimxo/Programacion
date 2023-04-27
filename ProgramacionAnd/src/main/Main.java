@@ -35,7 +35,7 @@ public class Main {
 		}
 		
 		vp = new Ventana_Principal();
-		vp.setTitle(dataBaseName.substring(0, dataBaseName.length()-3));
+		vp.setTitle("Conectado a: " + dataBaseName.substring(0, dataBaseName.length()-3));
 		vp.setVisible(true);
 		vi = new Ventana_Insercciones();
 		vi.setVisible(false);
