@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import UD_10.Ventana_02;
 import controlador.ManejaDb;
+import vista.Ventana_CrearTabla;
 import vista.Ventana_Insercciones;
 import vista.Ventana_Principal;
 
@@ -12,6 +13,8 @@ public class Main {
 	public static ManejaDb mDB;
 	public static Ventana_Principal vp; 
 	public static Ventana_Insercciones vi;
+	public static Ventana_CrearTabla vct;
+	public static String returned;
 
 	public static void main(String[] args) {
 		
@@ -36,6 +39,9 @@ public class Main {
 		vp.setVisible(true);
 		vi = new Ventana_Insercciones();
 		vi.setVisible(false);
+		vct = new Ventana_CrearTabla();
+		vct.setTitle("Crear tabla");
+		vct.setVisible(false);
 		
 	}
 

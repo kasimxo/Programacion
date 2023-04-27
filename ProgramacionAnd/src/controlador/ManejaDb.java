@@ -10,6 +10,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import main.Main;
+
 public class ManejaDb {
 	
 	private String dataBaseName;
@@ -22,10 +24,11 @@ public class ManejaDb {
 		
 	}
 	
-	public void changeDataBase(String dataBasename) throws SQLException {
-		c.close();
-		this.dataBaseName = dataBaseName;
-		this.c = DriverManager.getConnection("jdbc:sqlite:D:\\sqlite\\" + dataBaseName);
+	public void changeDataBase(String newDataBaseName) throws SQLException {
+		//c.close();
+		this.dataBaseName = newDataBaseName;
+		this.c = DriverManager.getConnection("jdbc:sqlite:D:\\sqlite\\" + newDataBaseName);
+		
 	}
 	
 	
@@ -33,6 +36,7 @@ public class ManejaDb {
 		List<String> tablas = new ArrayList<String>();
 		
 		try {
+			System.out.println(c.getClientInfo(dataBaseName));
 			Statement sentencia = c.createStatement();
 			String sql = "SELECT * FROM sqlite_master where type = \"table\";";
 			ResultSet result = sentencia.executeQuery(sql);
@@ -66,20 +70,23 @@ public class ManejaDb {
 			System.out.println("La tabla " + name + "no existe");
 			createDB(name);
 		}
-		
 	}
 	
 	
-	public void createDB(String name) throws SQLException {
-		Statement sentencia = c.createStatement();
-		String sql = "Create table " + name + "("
-				+ "nombre varchar(15),"
-				+ "apellido varchar(15),"
-				+ "telefono varchar(9)"
-				+ ");";
-		sentencia.executeUpdate(sql);
-		System.out.println("Se ha creado con exito la tabla " + name);
-		sentencia.close();
+	public String createDB(String name) {
+		try {
+			Statement sentencia = c.createStatement();
+			String sql = "Create table " + name + "("
+					+ "nombre varchar(15),"
+					+ "apellido varchar(15),"
+					+ "telefono varchar(9)"
+					+ ");";
+			sentencia.executeUpdate(sql);
+			sentencia.close();
+			return "Se ha creado con exito la tabla " + name;
+		} catch (SQLException SQLE) {
+			return "La tabla " + name + " ya existe o se ha producido un error durante su creación.";
+		}
 	}
 	
 	public void cerrar() throws SQLException {

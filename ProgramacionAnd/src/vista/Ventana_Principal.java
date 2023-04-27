@@ -29,6 +29,7 @@ public class Ventana_Principal extends JFrame {
 
 	private JLabel lbl_screen;
 	private JPanel contentPane;
+	
 
 	/**
 	 * Launch the application.
@@ -87,26 +88,36 @@ public class Ventana_Principal extends JFrame {
 		JButton btn_createTable = new JButton("Create table");
 		btn_createTable.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				try {
-					Main.mDB.createDB("raton");
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+					Main.vct.setVisible(true);
+					clearScreen();
 			}
 		});
 		btn_createTable.setBounds(283, 227, 141, 23);
 		contentPane.add(btn_createTable);
 		
 		JButton btn_changeDataBase_01 = new JButton("andres");
+		btn_changeDataBase_01.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					clearScreen();
+					Main.mDB.changeDataBase("andres.db");
+					Main.vp.setTitle("andres");
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 		btn_changeDataBase_01.setBounds(53, 11, 65, 23);
 		contentPane.add(btn_changeDataBase_01);
 		
-		JButton btn_changeDataBase_02 = new JButton("empleado");
+		JButton btn_changeDataBase_02 = new JButton("empleados");
 		btn_changeDataBase_02.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					Main.mDB.changeDataBase("empleado.db");
+					clearScreen();
+					Main.mDB.changeDataBase("empleados.db");
+					Main.vp.setTitle("empleados");
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -115,16 +126,7 @@ public class Ventana_Principal extends JFrame {
 		});
 		btn_changeDataBase_02.setBounds(219, 11, 65, 23);
 		contentPane.add(btn_changeDataBase_02);
-		btn_changeDataBase_01.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try {
-					Main.mDB.changeDataBase("andres.db");
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			}
-		});
+	
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {
@@ -143,4 +145,15 @@ public class Ventana_Principal extends JFrame {
 			}
 		});
 	}
+	
+	private void clearScreen() {
+		try {
+			lbl_screen.setText("");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 }
+
